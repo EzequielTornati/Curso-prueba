@@ -1,0 +1,426 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+
+}
+
+:root {
+        scroll-behavior: smooth;
+        /* Esto es para los link, o sea los Href. Estos no son unicamente una url, sino que pueden ser cosas de la misma pagina. En el codigo HTML puse diferentes REF que no tienen url y para que funcionen tengo que poner este comando de "root" para que, cuando yo toque ese link, me mande a una seccion de mi misma pagina*/
+
+}
+
+.contenedor {
+        width: 90%;
+        max-width: 1200px;
+        overflow: hidden;
+        margin: auto;
+        padding: 60px 0px;
+}
+
+header {
+        height: 100vh;
+        /* el vh es el % de pagina que va a ocupar, va de 1 a 100 */
+        background-color: rgb(232, 107, 240);
+        background-image: url(../img/1,0.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+}
+
+
+.head {
+        text-align: center;
+        padding: 0%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+}
+
+.head h1 {
+        background-color: #FC2542;
+        box-shadow: 0 0 10px #35FFFF;
+        text-align: center;
+        width: 50%;
+        border: solid;
+
+}
+
+.hamburguer {
+        position: fixed;
+        /* FIXED es para que un elemento se quede quieto en toda la agina sin importar que suba o baje, por eso con la imagen pasa eso */
+        
+        top: 30px;
+        left: 30px;
+        background-color: #35FFFF;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        /* para cosas que vos sabes que clickear, le agregas "cursos: pointer" para que aparezca la manito a asi se sabe que tenes que clickear*/
+        border-radius: 60%;
+        /*radius es para hacer que, de a poco se asemeje mas a un circulo (es mas recomendable que se use) */
+        box-shadow: 0 0 6px rgba(0, 0, 0, 5)
+                /* el RGBA se puede usar por ejemplo para hacer sombreados*/
+}
+
+.menu-navegacion {
+        position: fixed;
+        bottom: 0;  /*DEPENDIENDO SI PONGO, TOP, LEFT, RIGHT O BOTTOM ES DE DONDE SALE LA IMAGEN */
+        left: 0;
+        width: 15vw;
+        height: 100%;
+        background-color: #A4252E;
+        display: flex;
+        flex-direction: column;
+        /* Esto es para que las cosas se pongan una debajo de la otra*/
+        justify-content: space-evenly;
+        /* Space-evenly centra equitativamente los elementos que yo marque arriba en columna. Centro por ejemplo los centra verticalmente, porque pusimos que sea una columna*/
+        align-items: center;
+        /*transition: transform .3s ease-in-out;*/
+        transform: translateY(120%);  /*CUANDO PUSE UNA Y ES PARA PODER DETERMINAR EL EJE EN DONDE SE MUEVE, CORRESPONDE A TOP O BOTTOM, X A LEFT O RIGHT */
+        box-shadow: 0 0 20px black  /* #38b7c1 */;
+        transition: transform .3s ease-in-out;
+        background-image: url(/img/11\,0.jpg);
+        background-size:  cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        text-transform: uppercase;   
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+}
+.menu-navegacion a {
+        color: black;
+        margin-top: -70%;
+        margin-bottom: -60%;
+        margin-left: 15%;
+}
+
+ 
+.spread{
+ transform: translate(0);
+}
+
+.titulo {
+        font-size: 50px;
+        margin-bottom: 15px;
+}
+
+.copy {
+        font-weight: 300;
+        font-size: 30px;
+}
+
+/* NUESTRO SERVICIO*/
+
+.subtitulo {
+        text-align: center;
+        font-weight: 300;
+        color: black;
+        font-size: 40px;
+        /* tamaño de la fuente */
+        background-color: #FC2542;
+        border: solid;
+        width: 50%;
+        margin: auto;
+        margin-bottom: 50px;
+}
+
+/* AHORA ESTOY HACIENDO ESTO CON LO QUE ES "NUESTRO SERVICIO" Y SOLO SE VA A MODIFICAR LO QUE ES ESO. ME PUEDO DAR CUENTA VIENDO LAS CLASES QUE ESTOY ELIGIENDO, SON LAS CORRESPONDIENTES A LAS QUE ASIGNE AL HTML DE "NUESTRO SERVICE"*/
+
+.contenedor-servicio {
+        /* Esto es para centrar las imagenes */
+        display: flex;
+        /* PONE LA IMAGE Y EL TEXTO JUNTOS*/
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        /* SI EL CONTENIDO QUE ESTA EN LA PAGINA NO ENTRA EN EL MISMO RENGLON, ESTO LO MANDA PARA ABAJO*/
+
+    }
+
+.contenedor-servicio img {
+        width: 40%;
+}
+
+.checklist-servicio {
+        width: 45%;
+}
+
+.service {
+        margin-bottom: 20px;
+}
+
+.n.service {
+        margin-bottom: auto;
+        /* colo:  */
+}
+
+.number {
+        display: inline-block;
+        background-color: #FC2542;
+        width: 25px;
+        height: 25px;
+        color: #fff;
+        text-align: center;
+        font-weight: 800;
+        border-radius: 50px;
+        margin-bottom: 2%;
+}
+
+.gallery {
+
+        background: linear-gradient(to top, #276266 0%, #37F9F9 100%);
+        ;
+
+}
+
+.contenedor-galeria {
+        display: flex;
+        justify-content: space-evenly;
+        /* esto es para que haya un espacio entre las cosas */
+        flex-wrap: wrap;
+        /* Cuando se establece en wrap, los elementos flexibles se envolverán automáticamente en filas o columnas adicionales cuando no haya suficiente espacio en la dirección principal (ya sea horizontal o vertical). Esto evita que los elementos se superpongan y permite que se ajusten en múltiples líneas o columnas.*/
+
+}
+
+.img-galeria {
+        object-fit: cover; /* Es para */ 
+        width: 40vh;
+        text-align: center;
+        border: solid;
+        display: block;
+        margin-bottom: 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 5);
+        cursor: pointer;
+        /* para cosas que vos sabes que clickear, le agregas "cursos: pointer" para que aparezca la manito a asi se sabe que tenes que clickear*/
+        
+}
+
+.imagen-light {
+        position: fixed;
+        background: rgba(0, 0, 0, .5);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        /* Este valor se usa para crear un contenedor flexible que permite un diseño más avanzado de los elementos secundarios. Los elementos secundarios dentro de un contenedor flexible pueden alinearse y distribuirse de manera más flexible en función de las propiedades de flexbox.*/
+        justify-content: center;
+        align-items: center;
+        transform: translate(100%); /* esto es para que la imagne aparezca*/
+        /* para que se oculte la imagen. COMO LO HICE ARRIBA. FALTA JAVASCRIPT PARA SEGUIR CON LA ANIMACION, ACA TENGO LA BASE*/
+        transition: transform .2s ease-in-out;
+        /* movimiento para hacer la animacion*/
+}
+
+.show {
+        transform: translate(0);
+}
+
+.agregar-imagenes {
+        object-fit: cover;
+        width: 60%;
+        border-radius: 10px;
+        transform: scale(0); /* buscar que es*/ 
+        transition: transform .3s .2s;
+}
+
+.showImage {
+
+        transform: scale(1);
+}
+
+.close {
+        position: absolute;
+        /* */
+        top: 15px;
+        right: 15px;
+        width: 60px;
+        cursor: pointer;
+}
+
+.experts {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        /* Los elementos flexibles se envuelven automáticamente en filas o columnas adicionales cuando no hay suficiente espacio en la dirección principal (ya sea horizontal o vertical). Esto evita que los elementos se superpongan y permite que se ajusten en múltiples líneas o columnas. Por si un elemento no entra en alguna linea, se quiere que ese elemento se vaya abajo y no se superponga */
+
+}
+
+.cont-expert {
+        width: 30%;
+        text-align: center;
+        margin-bottom: 20px;
+}
+
+.cont-expert img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+}
+
+.n-expert {
+        display: inline-block;
+        margin-top: 20px;
+        width: 100%;
+        font-weight: 400;
+}
+
+/* FOOTER*/
+footer {
+
+       
+ background: linear-gradient(to top, #1c1a1a 0%, #000000 100%);
+        padding-bottom: 0.1px; /* esto es por el colapsado de margenes */
+        /* background-image: url(/img/9\,0.jpg);    
+        
+        padding-bottom: 0.1px;
+        background-size: cover; 
+        background-position: 0%;
+        background-repeat: no-repeat;*/ 
+       
+
+
+  }
+
+
+  
+   
+.footer-content {
+        display: flex;
+        /*justify-content: space-between; */
+        /* Por ejemplo, si tienes tres elementos dentro de un contenedor horizontal y aplicas justify-content: space-evenly, el espacio entre cada elemento y los márgenes del contenedor será igual. */
+        align-items: center;
+        flex-wrap: wrap;
+        padding-top: 60px;
+        padding-bottom: 40px;
+
+}
+
+.contact-us {
+        width: 40%;
+        color: #fff;
+}
+
+.brand {
+        font-weight: 500;
+        font-size: 40px;
+}
+
+.brand+p{  /* El + P es porque en el HTML a ese P en particular no le di ninguna clase, entoncesle estoy indiciando cual es el elemento que le sigue(que es P) y que lo que voy a poner vaya ahi sin inportar de que tenga una clase o*/
+
+        font-weight: 500;
+        font-size:  20px;
+}
+
+.social-media{
+width: 50%; /* esto es para que la caja que contiene a los iconos tenga un 50%*/ 
+display: flex; /* para que los iconos se repartan equitativamente */
+justify-content: flex-end; /* para que los iconos vayan al final */
+}
+
+.social-media-icon{
+        display: inline-block;
+        margin-left:  20px;
+        width: 60px;
+        height: 60px;
+        border: 1px solid black;
+        border-radius: 60%;
+        text-align: center;
+        color: #fff;
+}
+
+.social-media-icon:hover{
+        background: #FC2542;
+        color: rgb(254, 254, 254);
+        transform: translateY(-3px) scale(1.05); /* esto es excelente, es para que se levante el icono cuando pasas el mouse por arriba */ 
+        box-shadow: 0 5px 5px 0px rgb(255, 255, 255);
+}
+
+.social-media-icon i{
+        font-size: 30px;
+        line-height: 60px;
+
+
+}
+.line{ 
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        height: 2px;
+        background: #fff;
+        margin-bottom: 60px;
+}
+/* vamos a adaptarla para CELU */
+/* el RESPONSIVE DESIGNE es para adaptar la pagina al celular*/
+@media screen and  (max-width:800px){ /* al poner esto estamos diciendo que vamos a hacer un camibio en la pantalla. Estamos condicionando a la pagina, supongamos que la pantalla con la cual estamos cargando nuestra pagina tiene de 800px para abajo, van a suceder estos cambios  ES UN CONDICIONANTE*/
+.menu-navegacion{
+        width: 20vh;
+}
+.titulo{
+        font-size: 40px;
+}
+.contenedor-servicio img{
+        width: 80%;
+        margin-bottom: 40px;
+        
+}
+.checklist-servicio{
+        width: 80%;
+}
+.service{
+        margin-bottom: 30px;
+}
+
+.agregar-imagenes{
+width: 80%;
+}
+.img-galeria{
+        width: 45%;
+}
+
+.social-media i{
+        margin-left: 0;
+}
+
+}
+
+@media screen and  (max-width:500px){
+
+.menu-navegacion{
+        width: 65vh;
+}
+.hamburguer{
+        top: 20px;
+        left: 20px;
+}
+.titulo{
+        font-size: 30px;
+}
+.subtitulo{
+        font-size: 30px;
+}
+.agregar-imagenes{
+        width: 95%;
+}
+
+.img-galeria{
+        width: 90%;
+}
+
+.social-media{
+        width: 100%;
+}
+
+.contact-us{
+        width: 90%;
+}
+
+}
